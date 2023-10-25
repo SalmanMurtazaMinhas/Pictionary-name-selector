@@ -1,0 +1,328 @@
+
+
+html,
+body {
+  margin: 0;
+
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/62a3ff010a213173e29fe9fe/d2feb8a1-51a6-484e-9602-816abbe64529/daydreaming-lizzyitzkowitz.gif?format=750w');
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: white;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+
+  /* background: #212121; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.doors {
+  display: flex;
+    background-color: #23327d6b;
+  box-shadow: 5px 5px 30px 72px #23327d6b;
+}
+
+.door {
+  background: #23327d;
+  border: 2px solid rgb(187, 163, 23);
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4) inset;
+
+  width: 40vw;
+  height: 150px;
+  overflow: hidden;
+
+  border-radius: 1ex;
+  margin: 1ch;
+}
+
+.boxes {
+  /* transform: translateY(0); */
+  transition: transform 1s ease-in-out;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3rem;
+}
+
+.buttons {
+  margin: 1rem 0 2rem 0;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+
+  /* font-size: 1.2rem; */
+  font-size: 1.5rem;
+  /* text-transform: uppercase; */
+
+  margin: 0 0.2rem 0 0.2rem;
+}
+
+.info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+
+h1 {
+    color: white;
+}
+
+#game-con {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#game {
+  height: 30%;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: #23327d; */
+  background-color: #23327da2;
+  box-shadow: 5px 5px 30px 72px #23327d6b;
+
+}
+
+.nextQ{
+  width: 10%;
+  height: 6%;
+}
+
+.ans {
+  width: 40%;
+  height: 25%;
+  background-color: #23327d;
+  color: white;
+  border: 2px solid rgb(187, 163, 23);
+  border-radius: 10px;
+  margin: 5px;
+  /* box-shadow: 5px 40px 30px 72px #23327d6b; */
+  /* box-shadow: 10px 10px #23327da7; */
+
+}
+
+.question {
+  background-color: #23327d;
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+  min-height: 25%;
+  text-align: center;
+  font-size: 35px;
+  border: 2px solid rgb(187, 163, 23);
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 30px 72px #23327d6b; */
+
+
+
+}
+
+.Btn {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(#23327da2, #39fad7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  right: 48vw;
+  margin-top: 10px;
+  border: none;
+  transform: rotate(-90deg);
+}
+
+.arrow path {
+  fill: white;
+}
+
+.text {
+  font-size: 0.7em;
+  width: 100px;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: -50px;
+  opacity: 0;
+  transition-duration: .7s;
+  transform: rotate(90deg);
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .7s;
+}
+
+.Btn:hover .arrow {
+  animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+.btn-conteiner {
+  display: flex;
+  justify-content: center;
+  --color-text: #ffffff;
+  --color-background: #23327da2;
+  --color-outline: #23327da2;
+  --color-shadow: #23327da2;
+  margin: 10px;
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover, .btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+  
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+.next-btn {
+  position: relative;
+  bottom: 20vh;
+}
