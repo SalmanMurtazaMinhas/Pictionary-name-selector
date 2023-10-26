@@ -1,25 +1,28 @@
 // console.log('okayyyy lesss go')
-const introMusic = document.querySelector('#intro')
+const themeSong = document.querySelector('.themeSong')
 const spinMusic = document.querySelector('#spin')
 const rightAnsMusic = document.querySelector('#right-ans')
 const wrongAnsMusic = document.querySelector('#wrong-ans')
 const BackgroundMusic = document.querySelector('#background')
 
-let items = ["3B's", 'The Dynamic Duo', 'PetSpot', 'AlNokhatha', 'Favorr']
+let items = ["3B's", 'The Dynamic Duo', 'PetSpot', 'AlNokhatha', 'Favorr', 'Noor']
 
 // document.querySelector(".info").textContent = items.join(" ");
 
 const doors = document.querySelectorAll('.door')
 document.querySelector('#spinner').addEventListener('click', spin)
 document.querySelector('#spinner').addEventListener('click', () => {
-  introMusic.play()
-  setTimeout(() => {
-    BackgroundMusic.play()
-  }, 26000)
+  themeSong.play()
+  // setTimeout(() => {
+  //   BackgroundMusic.play()
+  // }, 26000)
 })
 document.querySelector('#reseter').addEventListener('click', init)
 document.querySelector('#reseter').addEventListener('click', () => {
   // BackgroundMusic.play()
+  themeSong.pause()
+  themeSong.currentTime=0;
+
 })
 
 async function spin() {
@@ -44,7 +47,7 @@ function init(firstInit = true, groups = 1, duration = 1) {
     const boxesClone = boxes.cloneNode(false)
 
     // const pool = ["[̲̅$̲̅(̲̅ιοο̲̅)̲̅$̲̅]"];
-    const pool = ['🪙']
+    const pool = ['?']
     if (!firstInit) {
       const arr = []
       for (let n = 0; n < (groups > 0 ? groups : 1); n++) {
